@@ -31,3 +31,24 @@ Oznaczenie wejść/wyjść cyfrowych:
 |16|	X17|	2^15 bit|
 
 Schemat elektryczny sterowania:
+
+![main_img](img/Enkoder_abs.png)
+
+Sekcja inicjacyjna PLC:
+
+![PLC_init](img/img_0.PNG)
+
+Obsługa wejść:
+
+![PLC_input0](img/img_1.PNG)
+![PLC_input1](img/img_2.PNG)
+
+Operacje arytmetyczne bitów:
+
+![PLC_bin](img/img_3.PNG)
+
+Operacje sumowanie bitów:
+
+![PLC_sum](img/img_4.PNG)
+
+Program pracuję w nieskończonej pętli, więc wynik pozycji będzie zapisywany w rejestrze danych D99 po wykonaniu sekwencji obliczeń arytmetycznych. Sterownik nie obsługuje sygnałów o wysokiej częstotliwości wejściowej, więc nie nadaje się do układów napędowych o wysokich obrotach wału, jedynie można wykorzystać w napędach wolnobieżnych. Dodatkowym ograniczeniem tego zastosowania jest moc obliczeniowa sterownika i jego szybkość kalkulacji arytmetycznej - w tym przypadku istnieje ryzyko, że pozycja wału nie będzie aktualizowana natychmiastowo.
